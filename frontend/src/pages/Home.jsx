@@ -1,6 +1,6 @@
 import React from 'react';
 import { useApp } from '../context/AppContext';
-import './Toast.css';
+import '../components/Toast.css';
 
 export default function Toast() {
   const { toast } = useApp();
