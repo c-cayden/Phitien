@@ -1,0 +1,54 @@
+.tabs-container {
+  border-bottom: 2px solid var(--border);
+  margin-bottom: 28px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.tabs-container::-webkit-scrollbar { display: none; }
+
+.tabs-row {
+  display: flex;
+  gap: 0;
+  min-width: max-content;
+}
+
+/* ── Base tab — square, readable ── */
+.tab {
+  padding: 12px 20px;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  color: var(--text-secondary);
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+  white-space: nowrap;
+  border-radius: 0;
+  letter-spacing: 0.1px;
+  line-height: 1;
+}
+
+.tab:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* ── Active base (All) ── */
+.tab--active {
+  color: var(--gold-light);
+  border-bottom-color: var(--gold);
+  font-weight: 600;
+}
+
+/* ── Category-specific active colors ── */
+.tab--Finance.tab--active    { color: var(--cat-finance);       border-bottom-color: var(--cat-finance); }
+.tab--Crypto.tab--active     { color: var(--cat-crypto);        border-bottom-color: var(--cat-crypto); }
+.tab--Sports.tab--active     { color: var(--cat-sports);        border-bottom-color: var(--cat-sports); }
+.tab--Tech.tab--active       { color: var(--cat-tech);          border-bottom-color: var(--cat-tech); }
+.tab--Politics.tab--active   { color: var(--cat-politics);      border-bottom-color: var(--cat-politics); }
+.tab--Economy.tab--active    { color: var(--cat-economy);       border-bottom-color: var(--cat-economy); }
+.tab--Entertainment.tab--active { color: var(--cat-entertainment); border-bottom-color: var(--cat-entertainment); }
+.tab--Science.tab--active    { color: var(--cat-science);       border-bottom-color: var(--cat-science); }
