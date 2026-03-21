@@ -1,0 +1,166 @@
+.home {
+  padding: 32px 0 64px;
+}
+
+.home-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Generate section ── */
+.generate-section {
+  margin-bottom: 32px;
+}
+
+.generate-form {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--green);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+}
+
+.generate-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.generate-row {
+  display: flex;
+  gap: 10px;
+}
+
+.generate-input {
+  flex: 1;
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-sm);
+  padding: 11px 16px;
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.generate-input:focus { border-color: var(--green); }
+.generate-input::placeholder { color: var(--text-muted); }
+.generate-input:disabled { opacity: 0.6; }
+
+.generate-btn {
+  padding: 11px 24px;
+  background: var(--green);
+  border: 1px solid var(--green-light);
+  border-radius: var(--radius-sm);
+  color: #d4f7e4;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s, opacity 0.15s;
+  white-space: nowrap;
+}
+.generate-btn:hover:not(:disabled) { background: var(--green-light); }
+.generate-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+
+.generate-hint {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* ── Markets grid ── */
+.markets-section {
+  margin-bottom: 8px;
+}
+
+.markets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+/* ── Empty state ── */
+.markets-empty {
+  padding: 48px 24px;
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.markets-empty-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.markets-empty-sub {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.markets-empty-link {
+  background: none;
+  border: none;
+  color: var(--gold-light);
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  text-decoration: underline;
+  padding: 0;
+}
+
+/* ── Skeleton loading ── */
+.skeleton-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: skeleton-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes skeleton-pulse {
+  0%, 100% { opacity: 0.4; }
+  50%       { opacity: 0.9; }
+}
+
+.skeleton-line,
+.skeleton-bar,
+.skeleton-buttons {
+  background: var(--surface2);
+  border-radius: var(--radius-sm);
+}
+
+.skeleton-line.short  { height: 10px; width: 35%; }
+.skeleton-line.long   { height: 36px; width: 90%; }
+.skeleton-line.medium { height: 10px; width: 60%; }
+.skeleton-bar         { height: 10px; width: 100%; }
+.skeleton-buttons     { height: 38px; width: 100%; }
+
+/* ── Divider ── */
+.section-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 36px 0 28px;
+}
+
+/* ── Positions ── */
+.positions-section { }
+
+.section-heading {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
