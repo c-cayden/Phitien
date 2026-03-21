@@ -1,0 +1,8 @@
+[
+  {
+    "id": "demo-user",
+    "name": "Demo User",
+    "balance": 1000,
+    "bets": []
+  }
+]
