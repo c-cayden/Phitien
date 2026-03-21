@@ -2,7 +2,151 @@
   {
     "id": "demo-user",
     "name": "Demo User",
-    "balance": 1000,
-    "bets": []
+    "balance": 870,
+    "bets": [
+      {
+        "id": 1774127133597,
+        "marketId": 1,
+        "marketTitle": "Will the Federal Reserve cut interest rates at their May 2025 meeting?",
+        "side": "YES",
+        "amount": 10,
+        "payout": 18.52,
+        "entryProb": 0.54,
+        "placedAt": "2026-03-21T21:05:33.597Z",
+        "settled": false
+      },
+      {
+        "id": 1774127134905,
+        "marketId": 1,
+        "marketTitle": "Will the Federal Reserve cut interest rates at their May 2025 meeting?",
+        "side": "NO",
+        "amount": 10,
+        "payout": 22.73,
+        "entryProb": 0.44,
+        "placedAt": "2026-03-21T21:05:34.905Z",
+        "settled": false
+      },
+      {
+        "id": 1774127135640,
+        "marketId": 1,
+        "marketTitle": "Will the Federal Reserve cut interest rates at their May 2025 meeting?",
+        "side": "YES",
+        "amount": 10,
+        "payout": 18.52,
+        "entryProb": 0.54,
+        "placedAt": "2026-03-21T21:05:35.640Z",
+        "settled": false
+      },
+      {
+        "id": 1774127137816,
+        "marketId": 1,
+        "marketTitle": "Will the Federal Reserve cut interest rates at their May 2025 meeting?",
+        "side": "NO",
+        "amount": 10,
+        "payout": 22.73,
+        "entryProb": 0.44,
+        "placedAt": "2026-03-21T21:05:37.816Z",
+        "settled": false
+      },
+      {
+        "id": 1774127246490,
+        "marketId": 1,
+        "marketTitle": "Will the Federal Reserve cut interest rates at their May 2025 meeting?",
+        "side": "YES",
+        "amount": 10,
+        "payout": 18.52,
+        "entryProb": 0.54,
+        "placedAt": "2026-03-21T21:07:26.490Z",
+        "settled": false
+      },
+      {
+        "id": 1774127247916,
+        "marketId": 1,
+        "marketTitle": "Will the Federal Reserve cut interest rates at their May 2025 meeting?",
+        "side": "YES",
+        "amount": 10,
+        "payout": 17.86,
+        "entryProb": 0.56,
+        "placedAt": "2026-03-21T21:07:27.916Z",
+        "settled": false
+      },
+      {
+        "id": 1774127248608,
+        "marketId": 1,
+        "marketTitle": "Will the Federal Reserve cut interest rates at their May 2025 meeting?",
+        "side": "YES",
+        "amount": 10,
+        "payout": 17.24,
+        "entryProb": 0.58,
+        "placedAt": "2026-03-21T21:07:28.608Z",
+        "settled": false
+      },
+      {
+        "id": 1774127249767,
+        "marketId": 1,
+        "marketTitle": "Will the Federal Reserve cut interest rates at their May 2025 meeting?",
+        "side": "NO",
+        "amount": 10,
+        "payout": 25,
+        "entryProb": 0.4,
+        "placedAt": "2026-03-21T21:07:29.767Z",
+        "settled": false
+      },
+      {
+        "id": 1774127250590,
+        "marketId": 1,
+        "marketTitle": "Will the Federal Reserve cut interest rates at their May 2025 meeting?",
+        "side": "NO",
+        "amount": 10,
+        "payout": 23.81,
+        "entryProb": 0.42,
+        "placedAt": "2026-03-21T21:07:30.590Z",
+        "settled": false
+      },
+      {
+        "id": 1774127252354,
+        "marketId": 1,
+        "marketTitle": "Will the Federal Reserve cut interest rates at their May 2025 meeting?",
+        "side": "NO",
+        "amount": 10,
+        "payout": 22.73,
+        "entryProb": 0.44,
+        "placedAt": "2026-03-21T21:07:32.354Z",
+        "settled": false
+      },
+      {
+        "id": 1774127252602,
+        "marketId": 1,
+        "marketTitle": "Will the Federal Reserve cut interest rates at their May 2025 meeting?",
+        "side": "NO",
+        "amount": 10,
+        "payout": 21.74,
+        "entryProb": 0.46,
+        "placedAt": "2026-03-21T21:07:32.602Z",
+        "settled": false
+      },
+      {
+        "id": 1774127253273,
+        "marketId": 1,
+        "marketTitle": "Will the Federal Reserve cut interest rates at their May 2025 meeting?",
+        "side": "NO",
+        "amount": 10,
+        "payout": 20.83,
+        "entryProb": 0.48,
+        "placedAt": "2026-03-21T21:07:33.273Z",
+        "settled": false
+      },
+      {
+        "id": 1774127254102,
+        "marketId": 1,
+        "marketTitle": "Will the Federal Reserve cut interest rates at their May 2025 meeting?",
+        "side": "NO",
+        "amount": 10,
+        "payout": 20,
+        "entryProb": 0.5,
+        "placedAt": "2026-03-21T21:07:34.102Z",
+        "settled": false
+      }
+    ]
   }
 ]
