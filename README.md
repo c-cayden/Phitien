@@ -1,82 +1,75 @@
-# Phitien — Prediction Markets
+# Phitien
 
-A prediction markets app built for the KTP Hackathon. Bet points on real world events across categories like Horse Racing, Sports, Finance, Crypto, and more. Kentucky Derby / Wild West themed.
+Phitien is a hackathon-built prediction market app where users trade on future events, track positions, and generate new markets from live topics with AI.
 
----
+## Built With
 
-## Setup (first time only)
+- JavaScript
+- React
+- Node.js
+- Express
+- JSON local storage
+- Anthropic API
 
-You need Node.js installed. If you don't have it, download nvm-windows from https://github.com/coreybutler/nvm-windows/releases/latest, run the installer, then in PowerShell as Administrator:
+## Project Structure
 
-```powershell
-nvm install lts
-nvm use lts
+```text
+Phitien/
+  backend/
+    src/
+      data/
+      routes/
+      server.js
+  frontend/
+    src/
+      components/
+      context/
+      pages/
 ```
 
-Then install dependencies:
+### Prerequisites
+
+- Node.js 18 or newer
+- npm
+
+Node 18+ is recommended because the backend uses the built-in `fetch` API.
+
+### Install
 
 ```powershell
-cd path\to\Phitien\backend
+cd Phitien\backend
 npm install
 
-cd path\to\Phitien\frontend
+cd ..\frontend
 npm install
 ```
 
----
+### Run The App
 
-## Running the App
+Use two terminals.
 
-You need two PowerShell windows open at the same time.
+Terminal 1:
 
-**Window 1 — Backend:**
 ```powershell
-cd "$env:OneDrive\Hackathon\VSCode\Phitien\backend"
-node src/server.js
-```
-
-**Window 2 — Frontend:**
-```powershell
-cd "$env:OneDrive\Hackathon\VSCode\Phitien\frontend"
+cd Phitien\backend
 npm start
 ```
 
-Then go to **http://localhost:3000** in your browser. Both windows need to stay open while you're using the app.
+Terminal 2:
 
----
-
-## Adding Markets Manually
-
-Open `backend/src/data/markets.json` and copy an existing entry. Change the fields to your new market:
-
-```json
-{
-  "id": 999,
-  "title": "Will X happen by Y date?",
-  "category": "Sports",
-  "yesProb": 60,
-  "volume": 50000,
-  "resolved": false,
-  "outcome": null
-}
+```powershell
+cd Phitien\frontend
+npm start
 ```
 
-Valid categories: `Finance`, `Crypto`, `Sports`, `Tech`, `Politics`, `Economy`, `Entertainment`, `Science`, `HorseRacing`
-
-After saving, restart the backend with `Ctrl+C` then `node src/server.js`.
-
----
+Then open `http://localhost:3000`.
 
 ## AI Market Generator
 
-Paste an Anthropic API key (get one free at https://console.anthropic.com) into the header and click Connect AI. Then type any topic in the generator bar and click Generate Markets — Claude will search the web and create fresh markets automatically.
+Enter an Anthropic API key in the header, connect it, then type a topic in the generator form. Phitien will request new prediction markets grounded in current news and append them to the existing market list.
 
----
+## Notes
 
-## Common Issues
-
-**npm not found in VS Code terminal** — Switch the terminal to PowerShell: `Ctrl+Shift+P` → "Terminal: Select Default Profile" → PowerShell.
-
-**Page loads but no markets show** — Make sure the backend is still running in the other window.
-
-**Scripts disabled error** — Run `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser` in PowerShell as Administrator.
+- Edit files in `frontend/src` and `backend/src`, not in `frontend/build`
+- The `build` folder is generated output from `npm run build`
+- Market and user data are stored in `backend/src/data/*.json`
