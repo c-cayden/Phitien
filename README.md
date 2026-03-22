@@ -38,7 +38,7 @@ Node 18+ is recommended because the backend uses the built-in `fetch` API.
 
 ```powershell
 cd Phitien\backend
-npm install
+node src/server.js
 
 cd ..\frontend
 npm install
