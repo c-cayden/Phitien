@@ -52,7 +52,7 @@ Terminal 1:
 
 ```powershell
 cd Phitien\backend
-npm start
+node src/server.js
 ```
 
 Terminal 2:
