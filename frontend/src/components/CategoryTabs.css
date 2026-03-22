@@ -3,6 +3,7 @@
   margin-bottom: 28px;
   overflow-x: auto;
   scrollbar-width: none;
+  background: linear-gradient(180deg, var(--surface) 0%, transparent 100%);
 }
 .tabs-container::-webkit-scrollbar { display: none; }
 
@@ -12,9 +13,8 @@
   min-width: max-content;
 }
 
-/* ── Base tab — square, readable ── */
 .tab {
-  padding: 12px 20px;
+  padding: 13px 18px;
   background: transparent;
   border: none;
   border-bottom: 3px solid transparent;
@@ -27,7 +27,7 @@
   transition: color 0.15s, border-color 0.15s, background 0.15s;
   white-space: nowrap;
   border-radius: 0;
-  letter-spacing: 0.1px;
+  letter-spacing: 0.2px;
   line-height: 1;
 }
 
@@ -36,19 +36,18 @@
   background: rgba(255, 255, 255, 0.03);
 }
 
-/* ── Active base (All) ── */
 .tab--active {
   color: var(--gold-light);
   border-bottom-color: var(--gold);
   font-weight: 600;
 }
 
-/* ── Category-specific active colors ── */
-.tab--Finance.tab--active    { color: var(--cat-finance);       border-bottom-color: var(--cat-finance); }
-.tab--Crypto.tab--active     { color: var(--cat-crypto);        border-bottom-color: var(--cat-crypto); }
-.tab--Sports.tab--active     { color: var(--cat-sports);        border-bottom-color: var(--cat-sports); }
-.tab--Tech.tab--active       { color: var(--cat-tech);          border-bottom-color: var(--cat-tech); }
-.tab--Politics.tab--active   { color: var(--cat-politics);      border-bottom-color: var(--cat-politics); }
-.tab--Economy.tab--active    { color: var(--cat-economy);       border-bottom-color: var(--cat-economy); }
-.tab--Entertainment.tab--active { color: var(--cat-entertainment); border-bottom-color: var(--cat-entertainment); }
-.tab--Science.tab--active    { color: var(--cat-science);       border-bottom-color: var(--cat-science); }
+.tab--HorseRacing.tab--active   { color: var(--cat-horseracing);    border-bottom-color: var(--cat-horseracing); }
+.tab--Finance.tab--active       { color: var(--cat-finance);        border-bottom-color: var(--cat-finance); }
+.tab--Crypto.tab--active        { color: var(--cat-crypto);         border-bottom-color: var(--cat-crypto); }
+.tab--Sports.tab--active        { color: var(--cat-sports);         border-bottom-color: var(--cat-sports); }
+.tab--Tech.tab--active          { color: var(--cat-tech);           border-bottom-color: var(--cat-tech); }
+.tab--Politics.tab--active      { color: var(--cat-politics);       border-bottom-color: var(--cat-politics); }
+.tab--Economy.tab--active       { color: var(--cat-economy);        border-bottom-color: var(--cat-economy); }
+.tab--Entertainment.tab--active { color: var(--cat-entertainment);  border-bottom-color: var(--cat-entertainment); }
+.tab--Science.tab--active       { color: var(--cat-science);        border-bottom-color: var(--cat-science); }

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
 import './MarketCard.css';
 
-const SUITS = ['♠', '♥', '♦', '♣'];
+const CORNER_MARKS = ['★', '◆', '♘', '✦'];
 
 const CAT_CLASS = {
   Finance:       'cat-finance',
@@ -13,6 +13,7 @@ const CAT_CLASS = {
   Economy:       'cat-economy',
   Entertainment: 'cat-entertainment',
   Science:       'cat-science',
+  HorseRacing:   'cat-horseracing',
 };
 
 function shortVol(v) {
@@ -30,7 +31,7 @@ export default function MarketCard({ market, index }) {
   const np = 100 - yp;
   const yesPayout = stake > 0 ? (stake / yp * 100).toFixed(1) : '0.0';
   const noPayout  = stake > 0 ? (stake / np * 100).toFixed(1) : '0.0';
-  const suit = SUITS[index % 4];
+  const mark = CORNER_MARKS[index % 4];
   const catClass = CAT_CLASS[market.category] || 'cat-finance';
 
   async function handleBet(side) {
@@ -43,32 +44,19 @@ export default function MarketCard({ market, index }) {
 
   return (
     <div className="market-card">
-      {/* Card header */}
       <div className="card-header">
         <span className={`card-category ${catClass}`}>{market.category}</span>
-        <span className="card-suit">{suit}</span>
+        <span className="card-suit">{mark}</span>
       </div>
-
-      {/* Title */}
       <p className="card-title">{market.title}</p>
-
-      {/* Probability bar */}
       <div className="prob-bar-wrap">
-        <div
-          className="prob-bar-yes"
-          style={{ width: `${yp}%` }}
-          title={`YES ${yp}%`}
-        />
-        <div className="prob-bar-no" title={`NO ${np}%`} />
+        <div className="prob-bar-yes" style={{ width: `${yp}%` }} />
+        <div className="prob-bar-no" />
       </div>
-
-      {/* Probability labels */}
       <div className="prob-labels">
         <span className="prob-yes-lbl">YES &nbsp;{yp}%</span>
         <span className="prob-no-lbl">{np}%&nbsp; NO</span>
       </div>
-
-      {/* Stake row */}
       <div className="stake-row">
         <label className="stake-label" htmlFor={`stake-${market.id}`}>Stake</label>
         <div className="stake-input-wrap">
@@ -85,32 +73,19 @@ export default function MarketCard({ market, index }) {
         </div>
         <span className="vol-label">{shortVol(market.volume)} vol</span>
       </div>
-
-      {/* Payout preview */}
       <div className="payout-preview">
         YES pays <span className="payout-yes">{yesPayout} pts</span>
         &nbsp;·&nbsp;
         NO pays <span className="payout-no">{noPayout} pts</span>
       </div>
-
-      {/* Bet buttons */}
       <div className="bet-buttons">
-        <button
-          className="btn-yes"
-          onClick={() => handleBet('YES')}
-          disabled={placing || stake > balance}
-        >
-          {placing ? '...' : '▲ Buy YES'}
+        <button className="btn-yes" onClick={() => handleBet('YES')} disabled={placing || stake > balance}>
+          {placing ? '...' : '▲ Bet YES'}
         </button>
-        <button
-          className="btn-no"
-          onClick={() => handleBet('NO')}
-          disabled={placing || stake > balance}
-        >
-          {placing ? '...' : '▼ Buy NO'}
+        <button className="btn-no" onClick={() => handleBet('NO')} disabled={placing || stake > balance}>
+          {placing ? '...' : '▼ Bet NO'}
         </button>
       </div>
-
       {stake > balance && (
         <p className="insufficient">Insufficient points — add funds to continue</p>
       )}

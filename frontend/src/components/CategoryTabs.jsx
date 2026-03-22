@@ -4,12 +4,13 @@ import './CategoryTabs.css';
 
 const CATEGORIES = [
   { key: 'All',           label: 'All Markets' },
+  { key: 'HorseRacing',  label: 'Horse Racing' },
+  { key: 'Sports',        label: 'Sports' },
   { key: 'Finance',       label: 'Finance' },
   { key: 'Crypto',        label: 'Crypto' },
-  { key: 'Sports',        label: 'Sports' },
-  { key: 'Tech',          label: 'Tech' },
   { key: 'Politics',      label: 'Politics' },
   { key: 'Economy',       label: 'Economy' },
+  { key: 'Tech',          label: 'Tech' },
   { key: 'Entertainment', label: 'Entertainment' },
   { key: 'Science',       label: 'Science' },
 ];
